@@ -100,17 +100,20 @@ window.onload = function () {
 
 // 返回顶部Top
 
-    var button = document.querySelector('button');
-    window.onscroll=function () {
-    //            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if (window.pageYOffset> 600) {
+    let button = document.querySelector('button');
+
+    window.addEventListener('scroll',function () {
+        //            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (window.pageYOffset> 500) {
             button.style.opacity=1;
             button.style.width = "45px";
         } else {
             button.style.opacity=0;
             button.style.width = "0";
         }
-    };
+    });
+
+
     button.onclick = function () {
         var t = setInterval(function () {
             window.scrollBy(0,-10);

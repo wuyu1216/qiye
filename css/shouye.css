@@ -540,4 +540,5 @@ button{
     font-weight: 400;
     transition: all 1s;
     opacity:0;
+    z-index: 999;
 }
