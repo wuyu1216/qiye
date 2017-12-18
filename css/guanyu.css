@@ -14,12 +14,9 @@ nav .row{
     left:0;
 }
 nav .row img{
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    top:0;
-    bottom:0;
-    margin:auto 0;
+    width: 80px;
+    height: 78px;
+
 }
 nav .row ul{
     width: auto;

@@ -1,9 +1,10 @@
 nav{
     width: 100%;
     height: 79px;
-    background-color: rgba(0,0,0,0.5);
-    /*position: fixed;*/
-    /*z-index: 999;*/
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    z-index: 999;
+    transition: all 1s;
 }
 nav .row{
     width: 1170px;
@@ -13,20 +14,32 @@ nav .row{
     top:0;
     left:0;
 }
-nav .row img{
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    top:0;
-    bottom:0;
-    margin:auto 0;
+nav .row .logo{
+    width: 180px;
+    height: 78px;
+    padding:10px 0;
+    box-sizing: border-box;
+}
+nav .row .logo .title{
+    font-size: 24px;
+    color:#4C94DE;
+    font-weight: 600;
+    float:left;
+    line-height: 58px;
+    margin-left: 10px;
+
+}
+nav .row .logo img{
+    width:70px;
+    height:50px;
+    float:left;
 }
 nav .row ul{
     width: auto;
     height: 79px;
     position: absolute;
     top:0;
-    bottom;0;
+    bottom:0;
     margin:auto 0;
     right:0;
 }
@@ -40,7 +53,7 @@ nav .row ul li{
     box-sizing: border-box;
 }
 nav .row ul li a{
-    color:#fff;
+    color:#ccc;
 }
 nav .row ul li a:hover{
     color:#16b0dc;
@@ -64,6 +77,7 @@ nav .row ul li:nth-child(2){
 }
 nav .row ul li:nth-child(2):hover .son{
     visibility: visible;
+    z-index: 20;
 }
 nav .row ul li:nth-child(2):hover .jiao1{
     visibility: visible;
@@ -76,6 +90,12 @@ nav .row ul li:nth-child(2) .son{
     bottom:-79px;
     right:0;
     visibility: hidden;
+    padding:8px 15px;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+.son p:nth-child(1){
+    border-bottom: 1px solid rgba(0,0,0,.1);
 }
 nav .row ul li:nth-child(2) .jiao1{
     border-bottom: 7px solid;
@@ -96,14 +116,29 @@ nav .row ul li:nth-child(2) .jiao1{
     top:0;
     left:0;
 }
-.box .picture{
-    width: 2698px;
+ .picture{
+    width: 1349px;
     height: 100%;
+    position: relative;
+    top:0;
+    left:0;
 }
-.box .picture img{
+ .picture .banner-img{
     width: 1349px;
     height: 758px;
     float:left;
+    position: absolute;
+    top:0;
+    left:0;
+     opacity: 0;
+}
+.banner-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.picture .banner-active{
+    opacity: 1;
 }
 .box .left{
     width: 15%;
@@ -144,7 +179,7 @@ nav .row ul li:nth-child(2) .jiao1{
     margin-left: -12px;
     visibility: hidden;
 }
-.box ul{
+.box .banner-dian{
     width: 40px;
     height: 10px;
     position: absolute;
@@ -152,7 +187,7 @@ nav .row ul li:nth-child(2) .jiao1{
     left:50%;
     margin-left: -20px;
 }
-.box ul li{
+ .banner-dian li{
     width: 10px;
     height: 10px;
     background-color: rgba(255,255,255,.3);
@@ -161,12 +196,15 @@ nav .row ul li:nth-child(2) .jiao1{
     float:left;
     cursor: pointer;
 }
+.banner-dian .dian{
+    background-color: #333;
+}
 .met-index{
-    width: 1349px;
+    /*width: 1349px;*/
     height: 722px;
     background-color: white;
     margin:0 auto;
-    padding: 70px 0px;
+    padding: 70px 0;
     box-sizing: border-box;
 }
 .met-index h1{
@@ -240,19 +278,22 @@ nav .row ul li:nth-child(2) .jiao1{
     margin:auto 0;
     right:10px;
 }
+.met-index .item .you-active{
+    color:#76838f ;
+}
 .met-index .item i{
     font-size: 30px;
     color:#a3afb7;
     cursor: pointer;
 }
-.met-index .item i:hover{
+/*.met-index .item i:hover{
     color:#76838f;
-}
+}*/
 .met-index .item ul{
-    width: 1460px;
+    /*width: 1460px;*/
     height: 100%;
 }
-.met-index .item li{
+.met-index .item ul li{
     width: 320px;
     height: 100%;
     margin-right:30px;
@@ -262,7 +303,7 @@ nav .row ul li:nth-child(2) .jiao1{
     margin:0;
 }
 .met-index .item li:nth-child(4){
-    margin-left:60px;
+    margin-left:30px;
 }
 .met-index .item li .top{
     width: 100%;
@@ -307,6 +348,7 @@ nav .row ul li:nth-child(2) .jiao1{
     height: 567px;
     padding:70px 0;
     background-color: #f5f5f5;
+    margin:0 auto;
 }
 .met-news h1{
     width: 1140px;
@@ -355,12 +397,20 @@ nav .row ul li:nth-child(2) .jiao1{
     margin-top: 30px;
     float:left;
 }
-.met-news ul li .left{
+.met-news ul li .left {
     width: 160px;
     height: 96px;
     padding-right: 20px;
     float:left;
+
 }
+.met-news ul li .left img{
+    transition: transform .3s;
+}
+.met-news ul li .left:hover img{
+    transform:translateX(-8px);
+}
+
 .met-news ul li .right{
     width: 375px;
     height: 96px;
@@ -402,12 +452,18 @@ nav .row ul li:nth-child(2) .jiao1{
 .met-news ul li .right .info .eye{
     margin-left: 10px;
 }
+.kong{
+    width:1349px;
+    height: 20px;
+    background-color: #fff;
+    margin:0 auto;
+}
 footer{
     width: 1349px;
     height:141px;
-    margin-top: 20px;
     border-top:1px solid #f0f2f5;
     background-color: #f5f5f5;
+    margin:0 auto;
 }
 footer .text{
     width: 100%;
@@ -466,4 +522,22 @@ footer .text1 p{
     font-size: 14px;
     text-align: center;
     margin-bottom: 5px;
+}
+button{
+    list-style: none;
+    border:0;
+    width: 45px;
+    height: 45px;
+    border-radius:50%;
+    background-color: #62a8ea;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    color:#fff;
+    font-weight: 400;
+    transition: all 1s;
+    opacity:0;
 }
