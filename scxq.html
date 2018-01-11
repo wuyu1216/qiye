@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绿航绿萝</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_486747_lclrt5055pxvfgvi.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_467626_d2zo0b526n3r3sor.css">
+    <link rel="stylesheet" href="css/scxq.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scxq.js"></script>
+</head>
+<style>
+     .swiper-container {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+
+    }
+</style>
+<body>
+<nav>
+    <div class="row">
+        <a href="">
+            <img src="img/logo.png" alt="">
+        </a>
+        <ul>
+            <li>
+                <a href="shouye.html" ">网站首页</a>
+            </li>
+            <li>
+                <a href="huayu.html">物语花语
+                </a>
+            </li>
+            <li>
+                <a href="" style="color:#16b0dc;">物语商城</a>
+            </li>
+            <li>
+                <a href="huayi.html">物语花艺</a>
+            </li>
+            <li>
+                <a href="liuyan.html">留言建议</a>
+            </li>
+            <li>
+                <a href="guanyu.html">关于我们</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section>
+    <div class="home">
+        <a href="shangcheng.html"><h3> >物语商城</h3></a>
+    </div>
+    <div class="content">
+        <div class="title">
+            <h2>绿航绿萝</h2>
+            <div class="line"></div>
+        </div>
+        <div class="top">
+            <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(img/1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/6.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/7.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(img/8.jpg)"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+        </div>
+        <div class=one>净化空气</div>
+        <div class=two>适宜家用及办公养眼</div>
+        <div class=three>被称为“生命之花”</div>
+        <div class=four>多分枝，枝悬垂</div>
+        <div class=five>简单又好看</div>
+        <div class=six>花语是“守望幸福”</div>
+    </div>
+</section>
+<footer>
+    <div class="text">
+        <a href="">
+            <i class="iconfont">&#xe603;</i>
+        </a>
+        <a href="">
+            <i class="iconfont qq">&#xe644;</i>
+        </a>
+        <a href="">
+            <i class="iconfont infomate">&#xe602;</i>
+        </a>
+    </div>
+    <div class="text1">
+        <a href="">豫ICP备17021305号</a>
+        <a href="">
+            <img src="img/gonganbeian.png" alt="">
+            豫公网安备 41012202000160号
+        </a>
+        <p>联系电话 0371-62180519 15890062947</p>
+        <p>山西太原物语花卉有限公司 版权所有 © 2017-2021</p>
+    </div>
+</footer>
+<script src="js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop:true,
+        initialSlide :1,
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+</body>
+</html>

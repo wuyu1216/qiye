@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #000;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        padding-top: 25px;
+        position: relative;
+    }
+    .title{
+        width: 100%;
+        height: 60px;
+        background: rgba(0,0,0,.3);
+        position: absolute;
+        bottom:46px;
+        left:0;
+        text-align: center;
+        line-height: 60px;
+        z-index: 999;
+        font-size: 20px;
+        color:#fff;
+    }
+    .swiper-slide {
+        overflow: hidden;
+        /*width: 1200px;*/
+        height: 600px;
+    }
+    .back{
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        top:10px;
+        right:10px;
+        z-index: 9999;
+    }
+    .back h2{
+        font-size: 44px;
+        text-align: center;
+        line-height: 50px;
+        color:rgba(255,255,255,.6);
+    }
+
+</style>
+<body>
+<div class="back">
+    <a href="huayi.html">
+        <h2>×</h2>
+    </a>
+</div>
+<div class="swiper-container">
+    <div class="title">小彩瓷随心插</div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="swiper-zoom-container">
+                <img src="img/ll1.JPG">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-zoom-container">
+                <img src="img/ll2.JPG">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-zoom-container">
+                <img src="img/ll3.JPG">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-zoom-container">
+                <img src="img/ll.4.JPG">
+            </div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
+</div>
+<script src="js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        autoplay:true,
+        loop:true,
+        zoom: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+</body>
+</html>

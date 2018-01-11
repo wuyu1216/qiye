@@ -6,13 +6,11 @@ window.onload = function () {
     window.onscroll = function () {
         if (window.pageYOffset> 15) {
             nav.style.backgroundColor='#fff';
+            nav.style.borderColor='#ccc';
         }else{
             nav.style.backgroundColor='rgba(0,0,0,0.2)';
+            nav.style.borderColor='transparent';
         }
-
-
-
-
     };
     // 轮播图
     let imgs = document.querySelectorAll('.banner-img');
@@ -21,7 +19,7 @@ window.onload = function () {
     let zuo = document.querySelector('.left');
     let you =document.querySelector('.right');
     let now=0; //模拟下标，设置当前状态
-    var t = setInterval(move,2000);  //开启时间函数
+    var t = setInterval(move,3000);  //开启时间函数
     function move(type){
         type=type || 'right';
         if(type=='right'){
@@ -48,7 +46,7 @@ window.onload = function () {
         clearInterval(t);
     };
     banner.onmouseout=function(){
-        t = setInterval(move,2000);
+        t = setInterval(move,3000);
     };
     spot.forEach(function(val,index){
         val.addEventListener('click',function(){
@@ -70,38 +68,11 @@ window.onload = function () {
 };
 
 // 花艺节点轮播
-  /*  let bottom = document.querySelector('.bottom');
-    let items = document.querySelectorAll('.bottom>li');
-    let left = document.querySelector('.zuo>i');
-    let right = document.querySelector('.you>i');
-    let widths = bottom.firstElementChild.offsetWidth;
-    let rights = parseInt(getComputedStyle(bottom.firstElementChild,null).marginRight);
-    let count = bottom.childElementCount;
-    items.style.width = widths + rights + 'px';
-    let num = 0;
-    right.onclick = function(){
-        if(num == 4){
-            right.className = 'you-active';
-            left.className = '';
-            return;
-        }
-        num++;
-        items.style.transform = `translateX(${-320*num}px)`;
-    };
-    left.onclick = function(){
-        if(num == 0){
-            left.className = 'you-active';
-            right.className = '';
-            return;
-        }
-        num--;
-        items.style.transform = `translateX(${-320*num}px)`;
-    };*/
+
 
 // 返回顶部Top
 
     let button = document.querySelector('button');
-
     window.addEventListener('scroll',function () {
         //            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         if (window.pageYOffset> 500) {
@@ -112,8 +83,6 @@ window.onload = function () {
             button.style.width = "0";
         }
     });
-
-
     button.onclick = function () {
         var t = setInterval(function () {
             window.scrollBy(0,-10);

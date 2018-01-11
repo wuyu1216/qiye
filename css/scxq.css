@@ -1,0 +1,331 @@
+nav{
+    width: 100%;
+    height: 79px;
+    background-color:#fff;
+    border:1px solid #ccc;
+    position: fixed;
+    z-index: 999;
+}
+nav .row{
+    width: 1170px;
+    height: 100%;
+    margin:0 auto;
+    position: relative;
+    top:0;
+    left:0;
+}
+nav .row img{
+    width: 80px;
+    height: 78px;
+}
+nav .row ul{
+    width: auto;
+    height: 79px;
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin:auto 0;
+    right:0;
+}
+nav .row ul li{
+    width:auto;
+    height: 79px;
+    font-size: 14px;
+    line-height:79px;
+    float:left;
+    padding: 0 15px 10px 16px;
+    box-sizing: border-box;
+}
+nav .row ul li a{
+    color:#000;
+}
+nav .row ul li a:hover{
+    color:#16b0dc;
+}
+nav .row ul li:nth-child(2){
+    width: 100px;
+    position: relative;
+    top:0;
+    left:0;
+}
+nav .row ul li:nth-child(2):hover .son{
+    visibility: visible;
+}
+nav .row ul li:nth-child(2):hover .jiao1{
+    visibility: visible;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    background: #F2F2F2;
+    padding-top:100px ;
+}
+.home{
+    margin-left: 40px;
+}
+.home a{
+    color: #4C94DE;
+}
+.home h3{
+    font-size: 14px;
+}
+.content{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    margin-top: 15px;
+    padding-top: 20px;
+    position: relative;
+}
+.content .title{
+    margin:0 auto;
+    width: 200px;
+    height: auto;
+    text-align: center;
+    position: relative;
+}
+.content .title h2{
+    font-family:'微软雅黑';
+    font-size: 30px;
+    background-image: -webkit-linear-gradient(#4C94DE,#01CCA0,#0F0DDC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+.content .line{
+    width: 200px;
+    height: 2px;
+    border-radius: 5px;
+    position: absolute;
+    bottom:-4px;
+    left:0;
+    background: #9104DB;
+}
+.content .one{
+    width: 150px;
+    height: 30px;
+    background: #4EC7CC;
+    position: absolute;
+    top:120px;
+    left:100px;
+    transform: rotate(-10deg);
+    font-size: 18px;
+    color:#333;
+    text-align: center;
+    border-radius: 5px;
+}
+.content .two{
+    width: 200px;
+    height: 30px;
+    background:  #CBCC6F;
+    position: absolute;
+    bottom:150px;
+    left:100px;
+    transform: rotate(20deg);
+    font-size: 20px;
+    color:#333;
+    text-align: center;
+    border-radius: 5px;
+}
+.content .three{
+    width: 150px;
+    height: 30px;
+    background:#05CC7E;
+    position: absolute;
+    bottom:60px;
+    right:150px;
+    transform: rotate(-15deg);
+    font-size: 16px;
+    color:#333;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+.content .four{
+    width: 200px;
+    height: 30px;
+    background:#7E6ECC;
+    position: absolute;
+    top:60px;
+    right:150px;
+    transform: rotate(15deg);
+    font-size: 16px;
+    color:#333;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+.content .five{
+    width: 100px;
+    height: 30px;
+    background:#C7B8CC;
+    position: absolute;
+    bottom:40px;
+    left:150px;
+    transform: rotate(-5deg);
+    font-size: 14px;
+    color:#333;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+.content .six{
+    width: 140px;
+    height: 30px;
+    background:#96A8CC;
+    position: absolute;
+    bottom:200px;
+    right:150px;
+    transform: rotate(15deg);
+    font-size: 14px;
+    color:#333;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+
+.content .top{
+    width:700px;
+    height: 350px;
+    margin:20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    box-sizing: border-box;
+}
+.top > .box{
+    width: 500px;
+    height: 100%;
+}
+.top > .box img{
+    width: 100%;
+    height: 100%;
+}
+.top > [class*=btn]{
+    width: 40px;
+    height: 60px;
+    background: #c0c0c0;
+    border-radius:2px;
+}
+.bottom{
+    width:600px;
+    height: 80px;
+    padding:3px;
+    box-sizing: border-box;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom > .photoList{
+    width: 400px;
+    height: 100%;
+    /*border:1px solid #cccccc;*/
+    overflow: hidden;
+    margin:0 auto;
+}
+.bottom > .photoList >ul{
+    /*width: 800px;*/
+    height: 100%;
+}
+.bottom > .photoList >ul li{
+    width: 100px;
+    height: 100%;
+    border:3px solid #fff;
+    float:left;
+    box-sizing: border-box;
+}
+.bottom > .photoList >ul li img{
+    width: 100%;
+    height: 100%;
+}
+.bottom > .photoList >ul .active{
+    border-color: #DE7111;
+}
+.top > [class*=btn] .iconfont{
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    font-weight: 800;
+    line-height:50px ;
+}
+.bottom > [class*=change] .iconfont{
+    font-size: 28px;
+    color: #333333;
+    text-align: center;
+    font-weight: 600;
+    line-height:60px ;
+}
+
+
+
+
+
+footer{
+    width: 1349px;
+    height:141px;
+    margin-top: 20px;
+    border-top:1px solid #f0f2f5;
+    background-color: #f5f5f5;
+}
+footer .text{
+    width: 100%;
+    height:46px;
+    padding:5px 0;
+    margin-top: 10px;
+}
+footer .text .iconfont{
+    font-size: 30px;
+    font-weight: 400;
+    color: #83b944;
+    line-height: 46px;
+    margin-left: 600px;
+}
+footer .text .iconfont:hover{
+    color:#86DB48;
+}
+footer .text .qq{
+    color: #62a8ea;
+    margin-left: 10px;
+}
+footer .text .qq:hover{
+    color:#86C4D1;
+}
+footer .text .infomate{
+    font-size: 26px;
+    color: #62a8ea;
+    margin-left: 10px;
+}
+footer .text .infomate:hover{
+    color:#86C4D1;
+}
+footer .text1{
+    width:380px;
+    height:25px;
+    margin:0 auto;
+}
+footer .text1 a{
+    color: #62a8ea;
+    font-size: 14px;
+    float:left;
+    line-height: 25px;
+}
+footer .text1 a:hover{
+    color:#86C4D1;
+    text-decoration: underline;
+}
+footer .text1 img{
+    width: 20px;
+    height: 20px;
+    float:left;
+    margin-left: 15px;
+}
+footer .text1 p{
+    color: #aaaaaa;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 5px;
+}

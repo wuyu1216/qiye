@@ -4,6 +4,7 @@ nav{
     background-color:#fff;
     position: fixed;
     z-index: 999;
+    border-bottom: 1px solid #ccc;
 }
 nav .row{
     width: 1170px;
@@ -14,19 +15,15 @@ nav .row{
     left:0;
 }
 nav .row img{
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    top:0;
-    bottom:0;
-    margin:auto 0;
+    width: 80px;
+    height: 78px;
 }
 nav .row ul{
     width: auto;
     height: 79px;
     position: absolute;
     top:0;
-    bottom;0;
+    bottom:0;
     margin:auto 0;
     right:0;
 }
@@ -100,14 +97,14 @@ section .content{
     margin:0 auto;
 }
 section .content .left{
-    width: 847.5px;
+    width: 847px;
     height: auto;
     padding:0 15px;
     background-color: white;
     float:left;
 }
 section .content .left .title{
-    width: 817.5px;
+    width: 817px;
     height: 88px;
     padding:30px 15px 0;
 }
@@ -127,16 +124,16 @@ section .content .left .title .info{
     font-weight: 300;
 }
 section .content .left .center{
-    width: 817.5px;
+    width: 817px;
     height: 3500px;
     padding:30px 15px;
 }
 section .content .left .center .img{
-    width: 817.5px;
+    width: 817px;
     height: 454px;
 }
 section .content .left .center .img img{
-    width: 817.5px;
+    width: 817px;
     height: 454px;
 }
 section .content .left .center p{
@@ -146,12 +143,12 @@ section .content .left .center p{
     margin:30px 0 20px 0;
 }
 section .content .left .bottom{
-    width: 817.5px;
+    width: 817px;
     height: 64px;
     padding: 0 15px 30px;
 }
 section .content .left .bottom ul{
-    width: 817.5px;
+    width: 817px;
     height: 43px;
     padding-top: 20px;
     border-top: 1px solid #f0f2f5;
@@ -185,8 +182,8 @@ section .content .left .bottom ul .you a:hover{
     border-color:#62a8ea;
 }
 section .content .right{
-    width: 222.5px;
-    height: 382px;
+    width: 222px;
+    height: 250px;
     padding: 20px;
     background-color: #fff;
     float:right;
@@ -213,8 +210,8 @@ section .content .right .list{
     width: 223px;
     height: 161px;
     padding:20px 0;
-    border-top: 1px solid #f0f2f5;
-    border-bottom: 1px solid #f0f2f5;
+    /*border-top: 1px solid #f0f2f5;*/
+    /*border-bottom: 1px solid #f0f2f5;*/
     margin-bottom: 20px;
 }
 section .content .right .list h3{
