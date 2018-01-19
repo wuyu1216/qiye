@@ -1,15 +1,13 @@
 window.onload = function () {
     // 顶部
     let nav = document.querySelector('nav');
-    // let list = document.querySelectorAll('li');
-    let list = nav.getElementsByTagName('a');
     window.onscroll = function () {
         if (window.pageYOffset> 15) {
             nav.style.backgroundColor='#fff';
-            nav.style.borderColor='#ccc';
+            nav.style.borderBottomColor='#ccc';
         }else{
             nav.style.backgroundColor='rgba(0,0,0,0.2)';
-            nav.style.borderColor='transparent';
+            nav.style.borderBottomColor='transparent';
         }
     };
     // 轮播图
@@ -19,7 +17,7 @@ window.onload = function () {
     let zuo = document.querySelector('.left');
     let you =document.querySelector('.right');
     let now=0; //模拟下标，设置当前状态
-    var t = setInterval(move,3000);  //开启时间函数
+    let t = setInterval(move,3000);  //开启时间函数
     function move(type){
         type=type || 'right';
         if(type=='right'){
@@ -35,11 +33,16 @@ window.onload = function () {
         }
         // console.log(now);
         imgs.forEach(function(val,index){      //遍历每张图片，进行重置
-            val.style.opacity=0;
+            val.style.opacity= 0;
+            val.classList.remove('active');
             spot[index].style.backgroundColor='rgba(255,255,255,.3)';
         });
         imgs[now].style.opacity=1;                //设置当前状态
-        spot[now].style.backgroundColor='#333';
+        imgs[now].classList.add('active');                //设置当前状态
+        spot[now].style.backgroundColor='#92C4CC';
+
+
+
 
     }
     banner.onmouseover=function(){
@@ -55,7 +58,7 @@ window.onload = function () {
                 spot[index1].style.backgroundColor='rgba(255,255,255,.3)';
             });
             imgs[index].style.opacity=1;                //设置当前状态
-            this.style.backgroundColor='#333';
+            this.style.backgroundColor='#92C4CC';
             now=index;
         });
     });
@@ -66,9 +69,6 @@ window.onload = function () {
         move('right');
     };
 };
-
-// 花艺节点轮播
-
 
 // 返回顶部Top
 

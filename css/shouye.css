@@ -2,10 +2,12 @@ nav{
     width: 100%;
     height: 79px;
     background-color: rgba(0,0,0,0.2);
-    border:1px solid transparent;
+    border-bottom:1px solid transparent;
     position: fixed;
     z-index: 999;
     transition: all 1s;
+    overflow: hidden;
+
 }
 nav .row{
     width: 1170px;
@@ -14,6 +16,7 @@ nav .row{
     position: relative;
     top:0;
     left:0;
+    overflow: hidden;
 }
 nav .row .logo{
     width: 180px;
@@ -54,59 +57,10 @@ nav .row ul li{
     box-sizing: border-box;
 }
 nav .row ul li a{
-    color:#ccc;
+    color:#BCBCBC;
 }
 nav .row ul li a:hover{
     color:#16b0dc;
-}
-nav .row ul li a:hover .jiao{
-    border-top-color:#16b0dc;
-}
-nav .row ul li .jiao{
-    border-top: 4px solid #fff;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-    position: absolute;
-    top:50%;
-    right:15px;
-}
-nav .row ul li:nth-child(2){
-    width: 100px;
-    position: relative;
-    top:0;
-    left:0;
-}
-nav .row ul li:nth-child(2):hover .son{
-    visibility: visible;
-    z-index: 20;
-}
-nav .row ul li:nth-child(2):hover .jiao1{
-    visibility: visible;
-}
-nav .row ul li:nth-child(2) .son{
-    width: 160px;
-    height: 79px;
-    background-color: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    bottom:-79px;
-    right:0;
-    visibility: hidden;
-    padding:8px 15px;
-    box-sizing: border-box;
-    transition: all .5s;
-}
-.son p:nth-child(1){
-    border-bottom: 1px solid rgba(0,0,0,.1);
-}
-nav .row ul li:nth-child(2) .jiao1{
-    border-bottom: 7px solid;
-    border-right: 7px solid transparent;
-    border-left: 7px solid transparent;
-    color: #fff;
-    position: absolute;
-    bottom:0;
-    right:10px;
-    visibility: hidden;
 }
 .box{
     width: 1349px;
@@ -123,6 +77,7 @@ nav .row ul li:nth-child(2) .jiao1{
     position: relative;
     top:0;
     left:0;
+     transition: .4s;
 }
  .caption{
      width: 50%;
@@ -134,6 +89,7 @@ nav .row ul li:nth-child(2) .jiao1{
      right:0;
      margin: auto;
      padding: 20px 0;
+
  }
 .caption h3{
     font-size: 30px;
@@ -142,51 +98,22 @@ nav .row ul li:nth-child(2) .jiao1{
     text-align: center;
     opacity: 0;
     transform: translate3d(0, -100%, 0);
-    /*animation: slide-top 4s infinite;*/
+    transition: .5s linear;
+}
+.active .caption h3,.active .caption p{
+    opacity: 1;
+    transform: translate3d(0, 0, 0)!important;
 }
 .caption p{
     font-size: 36px;
     font-weight: 300;
     color:#FAE8BA;
     text-align: center;
+    opacity: 0;
     transform: translate3d(0, 100%, 0);
+    transition: .5s linear .5s;
 }
-[class*=animation-]{
-    animation-duration: 3s;
-    /*animation-timing-function: ease-out;*/
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-delay: 300ms;
-}
-.animation-slide-top{
-    animation-name: slide-top;
-}
-.animation-slide-bottom{
-    animation-name: slide-bottom;
-}
-/*.animation-delay-300{
-    animation-delay: 300ms;
-}*/
-@keyframes slide-top {
-    0%{
-        opacity: 0;
-        transform: translate3d(0, -100%, 0);
-    }
-    100%{
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-@keyframes slide-bottom {
-    0%{
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-    }
-    100%{
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
+
  .picture .banner-img{
     width: 1349px;
     height: 758px;
@@ -261,7 +188,7 @@ nav .row ul li:nth-child(2) .jiao1{
     cursor: pointer;
 }
 .banner-dian .dian{
-    background-color: #333;
+    background-color: #92C4CC;
 }
 .met-index{
     /*width: 1349px;*/
@@ -270,19 +197,26 @@ nav .row ul li:nth-child(2) .jiao1{
     margin:0 auto;
     padding: 70px 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .met-index h1{
     width: 1140px;
     height: 43px;
     margin:0 auto 11px;
     padding-left: 430px;
-    /*margin-bottom: 11px;*/
     font-size: 36px;
     font-weight: 300;
     position: relative;
     top:0;
     left:0;
     box-sizing: border-box;
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+    transition: .5s linear .5s;
+}
+.hot{
+    opacity: 1!important;
+    transform: translate3d(0, 0, 0)!important;
 }
 .met-index h1 .more{
     width: 27px;
@@ -312,6 +246,11 @@ nav .row ul li:nth-child(2) .jiao1{
     font-weight: 300;
     text-align: center;
     color: #5e7387;
+    opacity: 0;
+    transition: .5s linear 1s;
+}
+.desHot{
+    opacity: 1!important;
 }
 .met-index .item{
     width: 1020px;
@@ -324,35 +263,12 @@ nav .row ul li:nth-child(2) .jiao1{
     top:0;
     left:0;
 }
-.met-index .item .zuo{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top:0;
-    bottom:0;
-    margin:auto 0;
-    left:10px;
-}
-.met-index .item .you{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top:0;
-    bottom:0;
-    margin:auto 0;
-    right:10px;
-}
-.met-index .item .you-active{
-    color:#76838f ;
-}
 .met-index .item i{
     font-size: 30px;
     color:#a3afb7;
     cursor: pointer;
 }
-/*.met-index .item i:hover{
-    color:#76838f;
-}*/
+
 .met-index .item ul{
     /*width: 1460px;*/
     height: 100%;
@@ -363,12 +279,7 @@ nav .row ul li:nth-child(2) .jiao1{
     /*margin-right:30px;*/
     float:left;
 }
-/*.met-index .item li:nth-child(3){
-    margin:0;
-}
-.met-index .item li:nth-child(4){
-    margin-left:30px;
-}*/
+
 .met-index .item li .top{
     width: 100%;
     height: 418px;
@@ -412,19 +323,22 @@ nav .row ul li:nth-child(2) .jiao1{
     padding:70px 0;
     background-color: #f5f5f5;
     margin:0 auto;
+    overflow: hidden;
 }
 .met-news h1{
     width: 1140px;
     height: 43px;
-    margin:0 auto;
+    margin:0 auto 11px;
     padding-left: 430px;
-    margin-bottom: 11px;
     font-size: 36px;
     font-weight: 300;
     position: relative;
     top:0;
     left:0;
     box-sizing: border-box;
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+    transition: .5s linear .5s;
 
 }
 .met-news h1 .more{
@@ -459,19 +373,45 @@ nav .row ul li:nth-child(2) .jiao1{
     padding:0 15px;
     margin-top: 30px;
     float:left;
+    opacity: 0;
+}
+.met-news ul li.slide-left{;
+    transform: translate3d(-100%,0,0);
+}
+.met-news ul li.slide-right{
+    transform: translate3d(100%,0,0);
+}
+.move{
+    opacity: 1!important;
+    transform: translate3d(0,0,0) !important;
+}
+.delay-100{
+    transition: .5s linear .5s;
+}
+.delay-200{
+    transition: .5s linear 1s;
+}
+.delay-300{
+    transition: .5s linear 1.5s;
+}
+.delay-400{
+    transition: .5s linear 2s;
 }
 .met-news ul li .left {
     width: 160px;
     height: 96px;
-    padding-right: 20px;
+    margin-right: 20px;
     float:left;
-
+    border-radius:5px;
+    overflow: hidden;
 }
-.met-news ul li .left img{
-    transition: transform .3s;
+.met-news ul li .left {
+    transition: transform .3s linear;
 }
-.met-news ul li .left:hover img{
-    transform:translateX(-8px);
+.met-news ul li .left:hover {
+    transform:translateY(-5px);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.7) ;
+    /*transform: rotate(1turn);*/
 }
 
 .met-news ul li .right{
@@ -479,7 +419,7 @@ nav .row ul li:nth-child(2) .jiao1{
     height: 96px;
     float:left;
 }
-.met-news ul li .right h2{
+.met-news ul li .right .detail{
     width: 375px;
     height: 21px;
     margin-bottom: 5px;
@@ -488,10 +428,10 @@ nav .row ul li:nth-child(2) .jiao1{
     font-weight: 400;
     line-height: 21px;
 }
-.met-news ul li .right h2 a{
+.met-news ul li .right .detail a{
     color: #37474f;
 }
-.met-news ul li .right h2 a:hover{
+.met-news ul li .right .detail a:hover{
     color: #62a8ea;
     text-decoration: underline;
 }
